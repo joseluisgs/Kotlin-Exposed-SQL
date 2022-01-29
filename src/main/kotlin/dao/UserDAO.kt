@@ -7,16 +7,22 @@ import org.jetbrains.exposed.dao.id.IntIdTable
 
 
 // Para hacer el DAO necesitamos la tabla y la clase que la mapea
-object Users : IntIdTable() {
+object UsersTable : IntIdTable() {
     val name = varchar("name", 50).index()
-    val city = reference("city", Cities)
+    val city = reference("city", CitiesTable)
     val age = integer("age")
 }
 
-class User(id: EntityID<Int>) : IntEntity(id) {
-    companion object : IntEntityClass<User>(Users)
+class UserDAO(id: EntityID<Int>) : IntEntity(id) {
+    companion object : IntEntityClass<UserDAO>(UsersTable)
 
-    var name by Users.name
-    var city by City referencedOn Users.city
-    var age by Users.age
+    var name by UsersTable.name
+    var city by CityDAO referencedOn UsersTable.city
+    var age by UsersTable.age
+
+    override fun toString(): String {
+        return "UserDAO(name='$name', city=${city.name}, age=$age)"
+    }
+
+
 }

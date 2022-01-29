@@ -6,13 +6,13 @@ import org.jetbrains.exposed.dao.id.EntityID
 import org.jetbrains.exposed.dao.id.IntIdTable
 
 // Para hacer el DAO necesitamos la tabla y la clase que la mapea
-object Cities: IntIdTable() {
+object CitiesTable: IntIdTable() {
     val name = varchar("name", 50)
 }
 
-class City(id: EntityID<Int>) : IntEntity(id) {
-    companion object : IntEntityClass<City>(Cities)
+class CityDAO(id: EntityID<Int>) : IntEntity(id) {
+    companion object : IntEntityClass<CityDAO>(CitiesTable)
 
-    var name by Cities.name
+    var name by CitiesTable.name
     val users by UserDAO referrersOn UsersTable.city
 }

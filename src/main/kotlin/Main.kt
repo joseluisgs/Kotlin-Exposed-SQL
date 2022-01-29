@@ -6,4 +6,5 @@ fun main() {
 
     // DSL Version
     DSLVersion()
+    DAOVersion()
 }

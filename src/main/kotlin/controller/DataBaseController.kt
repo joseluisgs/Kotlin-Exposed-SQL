@@ -2,8 +2,10 @@ package controller
 
 import com.zaxxer.hikari.HikariConfig
 import com.zaxxer.hikari.HikariDataSource
-import entities.Cities
-import entities.Users
+import dao.CitiesTable
+import dao.UsersTable
+import entities.CitiesDSL
+import entities.UsersDSL
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.transactions.transaction
 
@@ -25,7 +27,7 @@ object DataBaseController {
 
     private fun createTables() = transaction {
         addLogger(StdOutSqlLogger) // Para que se vea el log de consulas a la base de datos
-        SchemaUtils.create(Users, Cities)
+        SchemaUtils.create(UsersDSL, CitiesDSL, UsersTable, CitiesTable)
         println("Tables created")
     }
 }
