@@ -16,6 +16,9 @@ A la hora de manejar los datos, tenemos dos opciones en la API.
 
 Puedes consultar los manuales y ejemplos de la página del proyecto [Exposed](https://www.baeldung.com/kotlin/exposed-persistence) y este de [Baeldung](https://www.baeldung.com/kotlin/exposed-persistence).
 
+![imagen](https://github.com/JetBrains/Exposed/blob/master/docs/logo.png?raw=true)
+
+Se destaca que se ha usado HikariCP para mejorar el Pool de Conexiones en la API de Exposed.
 
 ## Autor
 Codificado con :sparkling_heart: por [José Luis González Sánchez](https://twitter.com/joseluisgonsan)
