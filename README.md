@@ -9,7 +9,12 @@ Sencillo ejemplo sobre el uso y abuso de Exposed ORM de Jetbrains sobre Kotlin
 ![imagen](https://www.adesso-mobile.de/wp-content/uploads/2021/02/kotlin-einfu%CC%88hrung.jpg)
 
 ## Acerca de
-Este proyecto tiene como objetivo el manejo de una base de datos relacional usando Exposed de Jetbrains.
+Este proyecto tiene como objetivo el manejo de una base de datos relacional usando [Exposed](https://github.com/JetBrains/Exposed) de Jetbrains.
+A la hora de manejar los datos, tenemos dos opciones en la API.
+- API [DSL](https://github.com/JetBrains/Exposed/wiki/DSL): Domain Specific Languaje.
+- API [DAO](https://github.com/JetBrains/Exposed/wiki/DAO): Como programación orientada a objetos.
+
+Puedes consultar los manuales y ejemplos de la página del proyecto [Exposed](https://www.baeldung.com/kotlin/exposed-persistence) y este de [Baeldung](https://www.baeldung.com/kotlin/exposed-persistence).
 
 
 ## Autor
